@@ -4,7 +4,6 @@ title: "자바 웹 개발 워크북 2"
 date: 2016-09-25 17:12:30 +0900
 ---
 
--
 #Chapter 2. 웹 프로그래밍의 기초 다지기
 <br>
 - HTTP: 웹 브라우저와 웹 서버 간의 통신 프로토콜. 클라이언트와 서버 사이에 서비스를 요청하고 응답하는 방식에는 SOAP, RESTful이 있다.
@@ -40,9 +39,10 @@ date: 2016-09-25 17:12:30 +0900
 ## GET요청
 
 특징
+
 - URL에 데이터를 포함하고 있기 때문에 데이터 조회에 적합하다.
 - 바이너리 및 대용량 데이터 전송은 불가능하다.
-- 요청 라인과 헤드 필드의 최대 크기(HTTP 사양에는 제한사항 없지만 대용량 URL에 의한 문제 때문에 웹 서버에 따라 최대 크기를 제한): Microsoft IIS 6.0: 16KB, Apache 웹 서버: 8KB
+- 요청 라인과 헤드 필드의 최대 크기(HTTP 사양에는 제한사항 없지만 대용량 URL에 의한 문제 때문에 웹 서버에 따라 최대 크기를 제한: Microsoft IIS 6.0: 16KB, Apache 웹 서버: 8KB)
 
 GET 요청이 발생하는 경우
 
@@ -87,7 +87,7 @@ POST요청의 문제점: 바이너리 데이터를 보낼 때 데이터 안에 &
  
  Ex) Content-Type : multipart/form-data; boundary=----Web … PyZ
 <br>
-       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [엔티티 헤더]  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    [미디어 타입]   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    [파트 구분자]
+       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [엔티티 헤더]  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    [미디어 타입]   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    [파트 구분자]
 	
 ### 멀티 파트 전송의 데이터 형식
 
