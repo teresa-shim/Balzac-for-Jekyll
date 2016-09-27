@@ -1,0 +1,52 @@
+---
+layout: post
+title: "Second Post"
+date: 2016-09-25 11:37:30 +0900
+---
+
+2
+Oh, I didn't test if I can post Korean.
+
+What I'm gonna post will be Korean...
+
+잘 나오나?
+
+Oh I see. It works. Now then, I have to change layouts. That super big character is really annoying.
+
+It's better. Even though the first line look strange. How can I change that CAPITAL CHARACTERS?
+
+Okay, I made it. So, last test will be "lots of Enters work". It seems like enter works just a bit. Like if I type enter n times, at page there are n-1 enters. This is line 18 in note pad.
+
+
+Between this line and upper line, there are 2 empty line. This is line 21 in note pad.
+
+
+
+
+Between this line and upper line, there are 4 empty line. This is line 26 in note pad.
+
+
+Wow it really dosen't work. I think the maximum empty line is one line. 
+Or maybe... This one works? This is 30th line in note pad.
+<br><br><br>
+This is line 32 in note pad. There are 3 br tag above, so there will be 3 empty lines.
+
+It works! But still ignore single enter... It's very uncomfortable. Is it matter of layout too?
+
+I just read that \n works too. Is it real?
+
+No. That's not. May be it was for other edition...
+
+And I just read that mutiple space at the end of the line work as multiple enter.     
+Let's see if it works or not.
+
+It dosen't work at all. They said that Markdown dosen't support it. OK I have to use br tag.
+
+OH MY I WAS SO CURIOUS AND I ADDED nbsp, THE NON-BREAKING SPACE ASCII CHARACTER AND PUNCTUAL MARKS IN THE WHOLE POST BECAME SQARE. OK I'LL DON'T DO THAT AGAIN.
+
+So, it's time to upload other post. See ya in the next post!
+<br><br><br>
+
+PS. But still I don't understand why it has problem so that git refuse to push. It works very properly in [local](http://127.0.0.1:4000/jekyll-theme-libretto/)
+
+And I know that link is link to themselves not my local host.

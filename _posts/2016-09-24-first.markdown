@@ -1,0 +1,23 @@
+---
+layout: post
+title: "First Post"
+date: 2016-09-24 22:07:30 +0900
+---
+
+
+1
+I'm just testing it **works** or *not*. Is it OK?
+
+OK. I think it's matter of layout. Isn't it?
+
+Hmmm..... how can I handle this?
+
+It's too hard too handle text. I want to remove that effect of super big character... **But how?**
+I think it's too... complicated.
+
+I have to go to bed today. It's done for today... 
+
+
+But I still don't know why it has problem to pull request. There is no problem in local. http://127.0.0.1:4000/jekyll-theme-libretto/ 
+
+Oh I forget how to make link through Markdown. Of course, it's no use because that address is for itself.
