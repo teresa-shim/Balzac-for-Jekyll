@@ -42,7 +42,7 @@ date: 2016-09-27 14:51:30 +0900
 
 ### 코디네이터
 
-- Zookeeper [(http://zookeeper.apache.org)](http://zookeeper.apache.org)
+- Zookeeper <http://zookeeper.apache.org>(http://zookeeper.apache.org)
 	분산 환경에서 서버 간의 상호 조정이 필요한 서비스를 제공하는 시스템.
 	1. 하나의 서버에만 서비스가 집중되지 않게 서비스를 알맞게 분산한다.
 	2. 하나의 서버에서 처리한 결과를 다른 서버와도 동기화해서 데이터의 안정성을 보장한다.
@@ -51,71 +51,71 @@ date: 2016-09-27 14:51:30 +0900
 
 ### 리소스 관리
 
-- YARN [(http://hadoop.apache.org)](http://hadoop.apache.org)
+- YARN <http://hadoop.apache.org>(http://hadoop.apache.org)
 	- 데이터 처리 작업을 실행하기 위한 클러스터 지원(CPU, 메모리, 디스크 등)과 스케쥴링을 위한 프레임워크. 기존 데이터 처리 프레임워크인 MapReduce의 단점을 극복하기 위해 시작된 프로젝트이며, 하둡 2.0부터 이용할 수 있다. MapReduce, 하이브, 임팔라, 타조, 스파크 등 다양한 애플리케이션들이 YARN에서 리소스를 할당 받아 작업을 실행한다.
-- Mesos [(http://mesos.apache.org)](http://mesos.apache.org)
+- Mesos <http://mesos.apache.org>(http://mesos.apache.org)
 	- 클라우드 인프라스트럭쳐 및 컴퓨팅 엔진의 다양한 자원(CPU, 메모리, 디스크)을 통합적으로 관리할 수 있도록 만든 자원관리 프로젝트. 클러스터링 환경에서 동적으로 자원을 할당하고 격리하는 메커니즘을 제공하며 웹 기반의 UI, 자바, C++, 파이썬 API를 제공한다. 하둡, 스파크, 스톰, 엘라스틱 서치, 카산드라, 젠킨스 등 다양한 애플리케이션을 Mesos에서 실행할 수 있다.
 
 ### 데이터 저장
 
-- HBase [(http://hbase.apache.org)](http://hbase.apache.org)
+- HBase <http://hbase.apache.org>(http://hbase.apache.org)
 	- HDFS 기반의 칼럼 기반 데이터베이스. 실시간 랜덤 조회 및 업데이트가 가능하며, 각 프로세스는 개인의 데이터를 비동기적으로 업데이트할 수 있다. 단, MapReduce는 일괄 처리 방식으로 수행된다.
-- Kudu [(http://getkudu.io)](http://getkudu.io)
+- Kudu <http://getkudu.io>(http://getkudu.io)
 	- 컬럼 기반의 스토리지로서, 특정 컬럼에 대한 데이터 읽기를 고속화할 수 있다. 물론 기존 HDFS에서 파케이(Parquet), RC, ORC와 같은 파일 포맷을 사용하면 칼럼 기반으로 데이터를 저장할 수 있지만, HDFS 자체가 온라인 데이터 처리에 적합하지 않다는 약점이 있다. 또한 HBase의 경우 데이터 분석 처리가 느리다는 단점이 있다. Kudu는 이러한 문제점을 보완해서 개발한 컬럼 기반 스토리지이며, 데이터의 발생부터 분석까지 시간을 단축할 구 있다.
 
 ### 데이터 수집
 
-- Chukwa [(http://chukwa.apache.org)](http://chukwa.apache.org)
+- Chukwa <http://chukwa.apache.org>(http://chukwa.apache.org)
 	- 분산 환경에서 생성되는 데이터를 HDFS에 안정적으로 저장하는 플랫폼. 분산된 각 서버에서 agent를 실행하고, collector가 agent로부터 데이터를 받아 HDFS에 저장한다. collector는 100개의 agent당 하나씩 구동되며, 데이터 중복 제거 등의 작업은 MapReduce로 처리한다.
-- Flume [(http://flume.apache.org)](http://flume.apache.org)
+- Flume <http://flume.apache.org>(http://flume.apache.org)
 	- Chukwa처럼 분산된 서버에 에이전트가 설치되고, 에이전트로부터 데이터를 전달받는 콜랙터로 구성된다. 차이점은 전체 데이터 흐름을 관리하는 마스터 서버가 있어서 데이터를 어디서 수집하고, 어떤 방식으로 전송하고, 어디에 저장할지를 동적으로 변경할 수 있다.
-- Scribe [(https://github.com/facebook/scribe)](https://github.com/facebook/scribe)
+- Scribe <https://github.com/facebook/scribe>(https://github.com/facebook/scribe)
 	- 페이스북에서 개발한 데이터 수집 플랫폼이며, Chukwa와는 다르게 데이터를 중앙 집중 서버로 전송하는 방식이다. 최종 데이터는 HDFS 외에 다양한 저장소를 활용할 수 있으며, 설치와 구성이 쉽게 다양한 프로그램 언어를 지원한다. HDFS에 저장하려면 JNI(Java Native Interface)를 이용해야 한다.
-- Sqoop [(http://sqoop.apache.org)](http://sqoop.apache.org)
+- Sqoop <http://sqoop.apache.org>(http://sqoop.apache.org)
 	- 대용량 데이터 전송 솔루션. Sqoop은 HDFS, RDBMS, DW, NoSQL 등 다양한 저장소에 대용량 데이터를 신속하게 전송하는 방법을 제공한다. 오라클, MS-SQL, DB2 등과 같은 상용 RDBMS와 MySQL, PostgreSQL과 같은 오픈소스 RDBMS 등을 지원한다.
-- Hiho [(https://github.com/sonalgoyal/hiho)](https://github.com/sonalgoyal/hiho)
+- Hiho <https://github.com/sonalgoyal/hiho>(https://github.com/sonalgoyal/hiho)
 	- Sqoop과 같은 대용량 데이터 전송 솔루션이며 현재 GitHub에 공개되어 있다. 하둡에서 데이터를 가져오기 위한 SQL을 지정할 수 있으며, JDBC 인터페이스를 지원한다. 현재는 오라클과 MySQL의 데이터 전송만 지원한다.
-- Kafka [(http://kafka.apache.org)](http://kafka.apache.org)
+- Kafka <http://kafka.apache.org>(http://kafka.apache.org)
 	- 데이터 스트림을 실시간으로 관리하기 위한 분산 메시징 시스템. publish-subscribe 모델로 구성되어 있으며, 데이터 손실을 막기 위해 디스크에 데이터를 저장한다. 파티셔닝을 지원하기 때문에 다수의 카프카 서버에서 메시지를 분산 처리할 수 있으며, 시스템 안정성을 위하여 로드밸런싱과 내고장성(Fault Tolerant)을 보장한다.
 
 ### 데이터 처리
 
-- Pig [(http://pig.apache.org)](http://pig.apache.org)
+- Pig <http://pig.apache.org>(http://pig.apache.org)
 	- 복잡한 MapReduce 프로그래밍을 대체할 피그 라틴(Pig Latin)이라는 자체 언어를 제공한다. MapReduce API를 매우 단순화한 형태이고 SQL과 유사한 형태로 설계되었다. 하지만 SQL과 유사하기만 할 뿐, 기존 SQL 지식을 활용하기가 어려운 편이다.
-- Mahout [(http://mahout.apache.org)](http://mahout.apache.org)
+- Mahout <http://mahout.apache.org>(http://mahout.apache.org)
 	- 하둡 기반으로 데이터 마이닝 알고리즘을 구현한 오픈소스 프로젝트. 현재 Classification, Clustering, Recommenders/collaborative filtering, Pattern Mining, Regression, Dimension reduction, Evolutionary Algorithm 등 주요 알고리즘을 지원한다.
-- Spark [(http://spark.apache.org)](http://spark.apache.org)
+- Spark <http://spark.apache.org>(http://spark.apache.org)
 	- 인메모리 기반의 범용 데이터 처리 플랫폼. 배치 처리, 머신러닝, SQL 질의 처리, 스트리밍 데이터 처리, 그래프 라이브러리 처리와 같은 다양한 작업을 수용할 수 있도록 설계되어 있다.
-- Impala [(http://impala.io)](http://impala.io)
+- Impala <http://impala.io>(http://impala.io)
 	- 클라우데라에서 개발한 하둡 기반의 분산 쿼리 엔진. MapReduce를 사용하지 않고, C++로 개발한 인메모리 엔진을 사용해 빠른 성능을 보여준다. 데이터 조회를 위한 인터페이스로 HiveQL을 사용하며, 수초 내에 SQL 질의 결과를 확인ㄴ할 수 있다.
-- Presto [(https://prestodb.io)](https://prestodb.io)
+- Presto <https://prestodb.io>(https://prestodb.io)
 	- 페이스북이 개발한 대화형 질의를 처리하기 위한 분산 쿼리 엔진. 메모리 기반으로 데이터를 처리하며, 다양한 데이터 저장소에 저장된 데이터를 SQL로 처리할 수 있다. 특정 질의의 경우 하이브 대비 10배정도 빠른 성능을 보여준다. 
-- Hive [(http://hive.apache.org)](http://hive.apache.org)
+- Hive <http://hive.apache.org>(http://hive.apache.org)
 	- 하둡 기반의 데이터웨어하우징용 솔루션. 페이스북에서 개발해 오픈소스로 공개되며 주목 받은 기술. SQL과 매우 유사한 HiveQL이라는 쿼리 언어를 제공한다. 따라서 자바를 모르는 데이터 분석가들도 쉽게 하둡 데이터를 분석할 수 있게 도와준다. HiveQL은 내부적으로 MapReduce 잡으로 변환되어 실행된다. 
-- Tajo [(http://tajo.apache.org)](http://tajo.apache.org)
+- Tajo ( <http://tajo.apache.org> )
 	- 고려대학교 박사 과정 학생들이 주도해서 개바한 하둡 기반의 데이터 웨어하우스 시스템. MapReduce 엔진이 아닌 자체 분산 처리 엔진을 사용하며, HiveQL을 사용하는 사용하는 가른 시스템과는 다르게 표준 SQL을 지원하는 것이 특징. HDFS, AWS S3, HBase, DBMS 등에 저장된 데이터 표준 SQL로 조회할 수 있고, 이기종 저장소 간의 데이터 조인 처리도 가능하다. 질의 유형에 따라 Hive나 Spark보다 1.5~10배 빠른 성능을 보여준다.
 
 ### 워크플로우 관리
 
-- Oozie [(http://oozie.apache.org)](http://oozie.apache.org)
+- Oozie ( <http://oozie.apache.org> )
 	- 하둡을 관리하는 워크플로우 및 코디네이터 시스템. 자바 서블릿 컨테이너에서 실행되는 자바 웹 애플리케이션 서버이며, MapReduce 작업이나 Pig 작업 같은 특화된 액션으로 구성된 워크플로우를 제어한다.
-- Airflow [(http://nerds.airbnb.com/airflow)](http://nerds.airbnb.com/airflow)
+- Airflow ( <http://nerds.airbnb.com/airflow> )
 	- 에어비앤비에서 개발한 워크플로우 플랫폼이다. 데이터 흐름의 시각화, 스케줄링, 모니터링이 가능하며, Hive, Presto, DBMS 엔진과 결합해서 사용할 수 있다.
-- Azkaban [(https://azkaban.github.io)](https://azkaban.github.io)
+- Azkaban ( <https://azkaban.github.io> )
 	- Linked In에서 개발한 워크플로우 플랫폼. Azkaban은 워크플로우 스케쥴러, 시각화된 절차, 인증 및 권한 관리, 작업 모니터링 및 알람 등 다양한 기능을 웹UI로 제공한다.
-- Nifi [(https://nifi.apache.org)](https://nifi.apache.org)
+- Nifi ( <https://nifi.apache.org> )
 	- 데이터 흐름을 모니터링 하기 위한 프레임워크. 여러 네트워크를 통과하는 데이터 흐름을 웹UI에서 그래프로 표현하며, 프로토콜과 데이터 형식이 다르더라도 분석이 가능하다. 또한 데이터를 흘려 보낼 때 우선순위를 제어할 수 있다.
 
 ### 데이터 시각화
 
-- Zeppelin [(https://zeppelin.incubator.apache.org)](https://zeppelin.incubator.apache.org)
+- Zeppelin ( <https://zeppelin.incubator.apache.org> )
 	- 빅데이터 분석가를 위한 웹 기반의 분석도구. 분석결과를 즉시 표, 그래프로 표현하는 시각화까지 지원한다. iPython의 Notebook과 유사한 노트북 기능을 제고하며, 분석가는 이를 통해 손쉽게 데이터를 추출, 정제, 분석, 공유할 수 있다. 또한 Spark, Hive, Tajo, Flink, 엘라스틱 서치, 카산드라, DBMS 등 다양한 분석 플랫폼과 연동할 수 있다.
 
 ### 데이터 직렬화
 
-- Avro [(http://avro.apache.org)](http://avro.apache.org)
+- Avro ( <http://avro.apache.org> )
 	- RPC(Remote Procedure Call)와 데이터 직렬화를 지원하는 프레임워크. JSON을 이용해 데이터 형식과 프로토콜을 정의하며, 작고 빠른 바이너리 포맷으로 데이터를 직렬화한다. 경쟁 솔루션으로는 아파치 Thrift, 구글 Protocol Buffer 등이 있다.
-- Thrift [(http://thrift.apache.org)](http://thrift.apache.org)
+- Thrift ( <http://thrift.apache.org> )
 	- 서로 다른 언어로 개발된 모듈들의 통합을 지원하는 RPC 프레임워크. 개발자가 데이터 타입과 서비스 인터페이스를 선언하면 RPC 형태의 클라이언트와 서버 코드를 자동으로 생성합니다. 자바, C++, C#, 펄, PHP, 파이썬, 델파이, 얼랭, Go, Node.js 등과 같은 다양한 언어를 지원한다.
 
 ## 1.4 하둡에 대한 오해
